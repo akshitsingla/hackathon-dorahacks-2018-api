@@ -1,0 +1,10 @@
+// Compile time arguments
+contract BuyVideo(typeOfCurrency: Asset,
+                unitsOfCurrency: Amount,
+                contentCreator: Program) locks videoToken {
+// Run time arguments
+  clause buy() requires payment: unitsOfCurrency of typeOfCurrency {
+    lock payment with contentCreator
+    unlock videoToken
+  }
+}

@@ -1,0 +1,30 @@
+// Request
+curl -X POST http://localhost:9888/create-asset \
+-d '{"alias": "VIDEO-234", "definition": {"url":"google.com/campaign-1","tags": ["bikes", "auto"]}, "root_xpubs": ["930740550f76bbb5dfe16342de41a5f90b0b87226fe973545d53aefb310f23ebd4522e1f8b2a6d34ebf56f9419c0c4b1b4cf3e66d4aee1637c2384383b0ced6f"], "quorum":1}'
+
+// Result
+{
+  "status": "success",
+  "data": {
+    "id": "aa779dd556556f992a6f7545971f6d8435784e21193e51bcc62559c0438f1879",
+    "alias": "VIDEO-234",
+    "issuance_program": "ae2097d70df87a782fe69d8eb6cf943fb61e68103e03654479625389657cf4d6fa895151ad",
+    "keys": [
+      {
+        "root_xpub": "930740550f76bbb5dfe16342de41a5f90b0b87226fe973545d53aefb310f23ebd4522e1f8b2a6d34ebf56f9419c0c4b1b4cf3e66d4aee1637c2384383b0ced6f",
+        "asset_pubkey": "97d70df87a782fe69d8eb6cf943fb61e68103e03654479625389657cf4d6fa893dcc461f23e46b9d327a76d017da61daa86d5dfe02399c3485f07e8596810a5e",
+        "asset_derivation_path": [
+          "000200000000000000"
+        ]
+      }
+    ],
+    "quorum": 1,
+    "definition": {
+      "tags": [
+        "bikes",
+        "auto"
+      ],
+      "url": "google.com/campaign-1"
+    }
+  }
+}
